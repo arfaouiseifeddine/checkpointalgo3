@@ -1,0 +1,25 @@
+  
+ALGORITHM calculNbreChar
+VAR
+    c : CHAR := '';
+    nbchar : INTEGER := 0;
+    nbmot : INTEGER := 0;
+    nbspace : INTEGER := 0;
+BEGIN
+    WHILE (c <> '.') DO
+        Read(c);
+        nbchar := nbchar +1;
+        IF (c = 'a' OR c='e' OR c='i' OR c='o' OR c='u' OR c='y') THEN
+            nbmot := nbmot +1;
+        END_IF
+
+        IF (c=' ') THEN
+            nbspace := nbspace +1;
+        END_IF
+        
+    END_WHILE
+
+    Write("taille de phrese ",nbchar);
+    Write("le nombre des mots dans la phrase ",nbmot);
+    Write("le nombre des espace dans la phrase est ",nbspace);
+END
